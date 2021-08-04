@@ -1,0 +1,254 @@
+/* 00 General Styles */
+:root {
+  --color-header: peachpuff;
+  --color-white: #ebebeb;
+  --color-light-blue: #1792d2;
+  --color-dark-blue: #143774;
+  --color-grey: #707070;
+  --color-light-grey: #efefef;
+  --color-yellow: ;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-full {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* ========================================================= */
+/* 01 Container Styles */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* ========================================================= */
+/* 02 Typorgraphy */
+h1,
+h2,
+h3 {
+  color: var(--color-dark-blue);
+  font-family: "Lora", serif;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+/* the site title */
+h1 {
+  font-size: 2.125rem;
+  margin: 0;
+}
+
+a {
+  color: var(--color-light-blue);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-dark-blue);
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* The subtitle for the h1 title. */
+.h1-subtitle {
+  font-weight: 700;
+  /* --color-light-blue: #1792D2; */
+  color: var(--color-light-blue);
+  font-size: 0.75rem;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+main p {
+  line-height: 1.5;
+}
+
+.price {
+  color: var(--color-light-blue);
+}
+/* ===================================================
+Layout
+=================================================== */
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* The font of the site title computes to 56px. Excluding 
+2em top and bottom padding and 3rem of margin bottom. */
+header {
+  background: var(--color-header);
+  padding: 1.25em 0 1em;
+  text-align: center;
+}
+
+.section {
+  padding-top: 2em;
+}
+
+footer {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  text-align: center;
+  padding: 2.5em 0;
+}
+
+/********************* navigation *********************/
+
+.container-flex-header {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 735px) {
+  .container-flex-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header {
+    padding: 1.25em 0;
+    text-align: left;
+  }
+}
+
+/* An ordered list has a default margin-top and bottom  of 16px */
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav li:nth-child(2) {
+  margin: 0;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: var(--color-grey);
+  font-weight: 700;
+  padding: 0.25em 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--color-light-blue);
+  border-bottom: 2px solid var(--color-light-blue);
+}
+
+.current-page {
+  border-bottom: 2px solid #707070;
+}
+
+.current-page:hover {
+  color: var(--color-grey);
+  border-bottom: 2px solid #707070;
+}
+
+/* ========================================================= */
+/* 04 Hero Styles */
+#hero-text {
+  padding: .5em 0;
+  background-color: #222;
+  color: white;
+  font-size: .725rem;
+  text-align: center;
+}
+
+.section .container {
+  padding-bottom: 2em;
+}
+
+/* ========================================================= */
+/* Menu */
+#thai {
+  background-color: #EECF5C;
+}
+#salads {
+  background-color: #00461E;
+}
+
+.menu-section-headline {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.menu-section-headline p {
+  font-style: italic;
+}
+
+.menu-section-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-subsection:not(:last-of-type) {
+  border-bottom: #707070 1px solid;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+@media (min-width: 735px) {
+  .menu-section-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .menu-subsection {
+    border-bottom: none;
+    width: 47%;
+  }
+
+  .menu-subsection:not(:last-of-type) {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }  
+}
+
+/* ========================================================= */
+#contact-details {
+  background-color: #F3ADA0;
+}
